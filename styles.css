@@ -1,0 +1,98 @@
+html {
+    font-family:'Roboto', sans-serif;
+    color: rgb(70, 70, 70);
+}
+
+body {
+    margin: 0;
+}
+header { 
+    background-color: lightgrey;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    height: 3em;
+    width: 100%;
+    z-index: 1;
+}
+
+header h1 {
+    text-align: center;
+    vertical-align: middle;
+    font-size: 130%;
+    color: slategrey;
+    margin-top: 0.5em;
+}
+
+nav {
+    margin-top: 3em;
+}
+
+main {
+    display: flex;
+    margin: 0;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 10%;
+    background-color: #f1f1f1;
+    height: 100%; /* Full height */
+    position: fixed; /* Make it stick, even on scroll */
+    overflow: auto; /* Enable scrolling if the sidenav has too much content */
+}
+
+nav a {
+    display: block;
+    border: 4px solid #f1f1f1;
+    padding: 20px;
+    text-decoration: none;
+    color: grey;
+}
+
+li a:hover {
+    color: white;
+    background-color: darkslategray;
+    
+}
+
+.content {
+    display: block;
+    margin: 3em auto auto 12%; /*to offset fixed header*/
+    width: 100%;
+}
+
+table {
+    width: 100%;
+}
+
+table, th, td {
+    border: 1px solid rgb(215, 215, 215);
+    font-size: 90%;
+}
+
+td {
+    vertical-align: text-top;
+    text-indent: 1%;
+}
+
+thead {
+    background-color: rgb(120, 182, 216);
+    text-align: left;
+    color: whitesmoke;
+    line-height: 2.5em;
+    text-indent: 1%;
+    align-items: center;
+
+}
+
+td.table-example {
+    font-family: monospace;
+    font-size: 110%;
+}
+
+td a:hover {
+    color: lightblue;
+}

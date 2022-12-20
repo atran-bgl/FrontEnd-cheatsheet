@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8">
+<title>Front End Cheat Sheet</title>
+<meta name="description" content="This page contains cheat sheet for HTML, CSS and JavaScript">
+<link rel="stylesheet" type="text/css" href="styles.css">
+<link rel="preconnect" href="https://fonts.googleapis.com"> 
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<!-- Content -->
+<header>
+    <h1>Front End Cheat Sheet</h1>
+</header>
+<main>
+    <nav>
+        <ul>
+            <li><a href="#html">HTML</a></li>
+            <li><a href="#css">CSS</a></li>
+            <li><a href="#javascript">JavaScript</a></li>
+        </ul>
+    </nav>
+    <div class="content">
+        <section id="html">
+            <h3>HTML Cheat sheet</h3>
+            <table>
+                <colgroup>
+                    <col span="1" class="table-name">
+                    <col span="1" class="table-example">
+                    <col span="1" class="table-note">  
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th scope="col" class="table-name">Name</th>
+                        <th scope="col" class="table-example">Example</th>
+                        <th scope="col" class="table-note">Note</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="table-name">add new</td>
+                        <td class="table-example">add new</td>
+                        <td class="table-note">add new</td>
+                    </tr>
+                    <tr>
+                        <td class="table-name">HTML Structure</td>
+                        <td class="table-example">&lt;!DOCTYPE html&gt;<br>
+                            &nbsp&nbsp&nbsp&nbsp&lt;html&gt;<br>
+                            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;head&gt;<br>
+                            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;title&gt;&lt;/title&gt;<br>
+                            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;link rel="stylesheet" type=""text/css" href="styles.css"/&gt;<br>
+                            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/head&gt;<br>
+                            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;body&gt;<br>
+                            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;header&gt;<br>
+                            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/header&gt;<br>
+                            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;main&gt;<br>
+                            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;section&gt;<br>
+                            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;article&gt;<br>
+                            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/article&gt;<br>
+                            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/section&gt;<br>
+                            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/main&gt;<br>
+                            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;footer&gt;<br>
+                            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/footer&gt;<br>
+                            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/body&gt;<br>
+                            &nbsp&nbsp&nbsp&nbsp&lt;/html&gt;<br>
+                        <td class="table-note">
+                            <li>title displays on browser name</li>
+                            <li>link tag referenced to css file</li>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="table-name">Table structure - Column & Row Header</td>
+                        <td class="table-example">&lt;table&gt;<br>
+                            &nbsp&nbsp&nbsp&nbsp&lt;caption&gt&lt;/caption&gt;<br>
+                            &nbsp&nbsp&nbsp&nbsp&lt;colgroup&gt<br>
+                            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;col span="1" class="column1"&gt<br>
+                            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;col span="1" class="column2"&gt<br>
+                            &nbsp&nbsp&nbsp&nbsp&lt;/colgroup&gt<br>
+                            &nbsp&nbsp&nbsp&nbsp&lt;tr&gt<br>
+                            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;td&gt&nbsp&lt/td&gt<br>
+                            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;th scope="col"&gtCOLUMN HEADER 1&lt;/th&gt<br>
+                            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;th scope="col"&gtCOLUMN HEADER 2&lt;/th&gt<br>
+                            &nbsp&nbsp&nbsp&nbsp&lt;/tr&gt<br>
+                            &nbsp&nbsp&nbsp&nbsp&lt;tr&gt<br>
+                            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;th scope="row"&gtROW HEADER&lt;/td&gt<br>
+                            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;td&gtROW DATA 1- cell 2&lt;/td&gt<br>
+                            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;td&gtROW DATA 1- cell 3&lt;/td&gt<br>
+                            &nbsp&nbsp&nbsp&nbsp&lt;/tr&gt<br>
+                            &lt;/table&gt;<br>
+                        </td>
+                        <td class="table-note">This table contains 3 columns: 2 column header, 1 row header and 1 row data</td>
+                    </tr>
+                    <tr>
+                        <td class="table-name">Table structure - Column Header Only</td>
+                        <td class="table-example">&lt;table&gt;<br>
+                            &nbsp&nbsp&nbsp&nbsp&lt;caption&gt&lt;/caption&gt;<br>
+                            &nbsp&nbsp&nbsp&nbsp&lt;thead&gt<br>
+                            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;tr&gt<br>
+                            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;th&gtCOLUMN 1&lt;/th&gt<br>
+                            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;th&gtCOLUMN 2&lt;/th&gt<br>
+                            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/tr&gt<br>
+                            &nbsp&nbsp&nbsp&nbsp&lt;/thead&gt<br>
+                            &nbsp&nbsp&nbsp&nbsp&lt;tbody&gt<br>
+                            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;tr&gt<br>
+                            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;td&gtROW DATA 1- cell 1&lt;/td&gt<br>
+                            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;td&gtROW DATA 1- cell 2&lt;/td&gt<br>
+                            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/tr&gt<br>
+                            &nbsp&nbsp&nbsp&nbsp&lt;/tbody&gt<br>
+                            &nbsp&nbsp&nbsp&nbsp&lt;tfoot&gt<br>
+                            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;tr&gt<br>
+                            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&lt;/tr&gt<br>
+                            &nbsp&nbsp&nbsp&nbsp&lt;/tfoot&gt<br>
+                            &lt;/table&gt;<br>
+                        </td>
+                        <td class="table-note">This table contains 2 column, 1 header and 1 row data</td>
+                    </tr>
+                    <tr>
+                        <td class="table-name">Google Fonts</td>
+                        <td class="table-example">
+                            &lt;head&gt;<br>
+                            &nbsp&nbsp&nbsp&lt;link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"&gt;<br>
+                            &lt;/head&gt;<br>
+                        </td>
+                        <td class="table-note">
+                            Reference:
+                            <a href="https://fonts.google.com/">Take a look at Google Fonts</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="css">
+            <h3>CSS Cheat sheet</h3>
+            <table>
+                <caption></caption>
+                <thead>
+                    <tr>
+                        <th class="table-name">CSS rule</th>
+                        <th class="table-example">Example</th>
+                        <th class="table-note">Notes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="table-name">Text - vertical alignment</td>
+                        <td class="table-example">
+                            element, tag {<br>
+                                &nbsp&nbsp&nbsp&nbspvertical-align: text-top;<br>
+                            }
+                        </td>
+                        <td class="table-note">
+                            Possible values: <br>
+                            baseline, sub, super, text-top, text-bottom, middle, top, bottom
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="table-name">Text - horiztontal alignment</td>
+                        <td class="table-example">
+                            element, tag {<br>
+                                &nbsp&nbsp&nbsp&nbsptext-align: center;<br>
+                            }
+                        </td>
+                        <td class="table-note">
+                            Possible values: <br>
+                            start, end, left, right, center, justify, match-parent
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="table-name">Text - indetation</td>
+                        <td class="table-example">
+                            element, tag {<br>
+                                &nbsp&nbsp&nbsp&nbsptext-indent: 0.5em;<br>
+                            }
+                        </td>
+                        <td class="table-note">
+                            Specifies the indentation applied to lines of inline content in a block.<br>
+                            The indentation only affects the first line of inline content in the block <br>
+                            unless the 'hanging' keyword is specified, <br>
+                            in which case it affects all lines except the first. <br>
+                            Syntax: [length-percentage] hanging each-line
+                        </td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                    </tr>
+                </tfoot>
+            </table>
+        </section>
+            
+        <section id="javascript">
+            <h3>JavaScript Cheat sheet</h3>
+        </section>
+            
+    </div>
+</main>
+</body>
+</html>
