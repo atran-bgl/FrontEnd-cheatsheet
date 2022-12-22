@@ -1,0 +1,137 @@
+.primary-color, .secondary-color, .error-color {
+    display: flex;
+}
+
+.color-title {
+    display: block;
+    width: 10%;
+}
+.color-boxes {
+    display: flex;
+    font-size: 90%;
+    text-transform: uppercase;
+}
+
+.color-boxes li {
+    list-style-type: none;
+}
+
+.box-1 {
+    display: inline-block;
+    width: 100px;
+    height: 80px;
+    background-color: #024602;
+    color: whitesmoke;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.box-2 {
+    display: inline-block;
+    width: 100px;
+    height: 80px;
+    background-color: #035e03;
+    color: whitesmoke;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.box-3 {
+    background-color: #047304;
+    display: inline-block;
+    width: 100px;
+    height: 80px;
+    color: whitesmoke;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.box-4 {
+    background-color: #048504;
+    display: inline-block;
+    width: 100px;
+    height: 80px;
+    color: whitesmoke;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.box-5 {
+    background-color: #b6c2b4;
+    display: inline-block;
+    width: 100px;
+    height: 80px;
+    color: whitesmoke;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.box-6 {
+    background-color: #dfeddd;
+    display: inline-block;
+    width: 100px;
+    height: 80px;
+    color: whitesmoke;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.box-7 {
+    background-color: #9bbe94;
+    display: inline-block;
+    width: 100px;
+    height: 80px;
+    color: whitesmoke;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.box-8 {
+    background-color: #7a9176;
+    display: inline-block;
+    width: 100px;
+    height: 80px;
+    color: whitesmoke;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.box-9 {
+    background-color: #f3e7b8;
+    display: inline-block;
+    width: 100px;
+    height: 80px;
+    color: whitesmoke;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.box-10 {
+    background-color: #ebc77f;
+    display: inline-block;
+    width: 100px;
+    height: 80px;
+    color: whitesmoke;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.box-11 {
+    background-color: #c2674c;
+    display: inline-block;
+    width: 100px;
+    height: 80px;
+    color: whitesmoke;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.box-12 {
+    background-color: #ba471e;
+    display: inline-block;
+    width: 100px;
+    height: 80px;
+    color: whitesmoke;
+    text-align: center;
+    vertical-align: middle;
+}

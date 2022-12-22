@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8">
+<title>UI UX awsomeness</title>
+<meta name="description" content="This page contains cheat sheet for HTML, CSS and JavaScript">
+<link rel="stylesheet" type="text/css" href="styles/styles.css">
+<link rel="preconnect" href="https://fonts.googleapis.com"> 
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+<body>
+<!-- Content -->
+<header>
+    <div class="logo">
+        <span class="material-symbols-outlined">hive</span>
+    </div>
+    <nav class="menu-top">
+        <ul>
+            <li class="nav-top"><a href="index.html">Design</a></li>
+            <li class="nav-top"><a href="#">HTML</a></li>
+            <li class="nav-top"><a href="css.html">CSS</a></li>
+            <li class="nav-top"><a href="javascript.html">JavaScript</a></li>
+            <li class="nav-top"><a href="#resources">Resources</a></li>
+        </ul>
+    </nav>
+    <form class="search-bar-top">
+        <input type="search" id="search-top" name="q" placeholder="search for a term"/>
+        <button>Search</button>
+    </form>
+</header>
+<main>
+    <nav class="menu-side">
+        <ul>
+            <li class="nav-side"><a href="#">Design</a></li>
+            <li class="nav-side"><a href="html.html">HTML</a></li>
+            <li class="nav-side"><a href="css.html">CSS</a></li>
+            <li class="nav-side"><a href="javascript.html">JavaScript</a></li>
+            <li class="nav-side"><a href="#resources">Resources</a></li>
+        </ul> 
+    </nav>
+    <div class="content">
+        <section id="html">
+            <h3>HTML Cheat sheet</h3>
+            <table>
+                <colgroup>
+                    <col span="1" class="table-name">
+                    <col span="1" class="table-example">
+                    <col span="1" class="table-note">  
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th scope="col" class="table-name">Name</th>
+                        <th scope="col" class="table-example">Example</th>
+                        <th scope="col" class="table-note">Note</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="table-name">HTML Structure</td>
+                        <td class="table-example">&lt;!DOCTYPE html&gt;<br>
+                            &nbsp&nbsp&nbsp&nbsp &lt;html&gt;<br>
+                            &nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp &lt;head&gt;<br>
+                            &nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp &lt;title&gt;&lt;/title&gt;<br>
+                            &nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp &lt;link rel="stylesheet" type=""text/css" href="styles.css"/&gt;<br>
+                            &nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp &lt;/head&gt;<br>
+                            &nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp &lt;body&gt;<br>
+                            &nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp &lt;header&gt;<br>
+                            &nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp &lt;/header&gt;<br>
+                            &nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp &lt;main&gt;<br>
+                            &nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp &lt;section&gt;<br>
+                            &nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp &lt;article&gt;<br>
+                            &nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp &lt;/article&gt;<br>
+                            &nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp &lt;/section&gt;<br>
+                            &nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp &lt;/main&gt;<br>
+                            &nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp &lt;footer&gt;<br>
+                            &nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp &lt;/footer&gt;<br>
+                            &nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp &lt;/body&gt;<br>
+                            &nbsp&nbsp&nbsp&nbsp &lt;/html&gt;<br>
+                        <td class="table-note">
+                            <li>title displays on browser name</li>
+                            <li>link tag referenced to css file</li>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="table-name">Table structure - Column & Row Header</td>
+                        <td class="table-example">&lt;table&gt;<br>
+                            &nbsp&nbsp&nbsp&nbsp &lt;caption&gt&lt;/caption&gt;<br>
+                            &nbsp&nbsp&nbsp&nbsp &lt;colgroup&gt<br>
+                            &nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp &lt;col span="1" class="column1"&gt<br>
+                            &nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp &lt;col span="1" class="column2"&gt<br>
+                            &nbsp&nbsp&nbsp&nbsp &lt;/colgroup&gt<br>
+                            &nbsp&nbsp&nbsp&nbsp &lt;tr&gt<br>
+                            &nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp &lt;td&gt&nbsp&lt/td&gt<br>
+                            &nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp &lt;th scope="col"&gtCOLUMN HEADER 1&lt;/th&gt<br>
+                            &nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp &lt;th scope="col"&gtCOLUMN HEADER 2&lt;/th&gt<br>
+                            &nbsp&nbsp&nbsp&nbsp &lt;/tr&gt<br>
+                            &nbsp&nbsp&nbsp&nbsp &lt;tr&gt<br>
+                            &nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp &lt;th scope="row"&gtROW HEADER&lt;/td&gt<br>
+                            &nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp &lt;td&gtROW DATA 1- cell 2&lt;/td&gt<br>
+                            &nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp &lt;td&gtROW DATA 1- cell 3&lt;/td&gt<br>
+                            &nbsp&nbsp&nbsp&nbsp &lt;/tr&gt<br>
+                            &lt;/table&gt;<br>
+                        </td>
+                        <td class="table-note">This table contains 3 columns: 2 column header, 1 row header and 1 row data</td>
+                    </tr>
+                    <tr>
+                        <td class="table-name">Table structure - Column Header Only</td>
+                        <td class="table-example">&lt; table &gt;<br>
+                            &nbsp&nbsp&nbsp&nbsp &lt; caption &gt&lt;/caption&gt;<br>
+                            &nbsp&nbsp&nbsp&nbsp &lt; thead &gt<br>
+                            &nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp &lt;tr&gt<br>
+                            &nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp &lt;th&gtCOLUMN 1&lt;/th&gt<br>
+                            &nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp &lt;th&gtCOLUMN 2&lt;/th&gt<br>
+                            &nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp &lt;/tr&gt<br>
+                            &nbsp&nbsp&nbsp&nbsp &lt;/thead&gt<br>
+                            &nbsp&nbsp&nbsp&nbsp &lt;tbody&gt<br>
+                            &nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp &lt;tr&gt<br>
+                            &nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp &lt;td&gtROW DATA 1- cell 1&lt;/td&gt<br>
+                            &nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp &lt;td&gtROW DATA 1- cell 2&lt;/td&gt<br>
+                            &nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp &lt;/tr&gt<br>
+                            &nbsp&nbsp&nbsp&nbsp &lt;/tbody&gt<br>
+                            &nbsp&nbsp&nbsp&nbsp &lt;tfoot&gt<br>
+                            &nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp &lt;tr&gt<br>
+                            &nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp &lt;/tr&gt<br>
+                            &nbsp&nbsp&nbsp&nbsp &lt;/tfoot&gt<br>
+                            &lt;/table&gt;<br>
+                        </td>
+                        <td class="table-note">This table contains 2 column, 1 header and 1 row data</td>
+                    </tr>
+                    <tr>
+                        <td class="table-name">Google Fonts</td>
+                        <td class="table-example">
+                            &lt;head&gt;<br>
+                            &nbsp&nbsp&nbsp&lt;link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"&gt;<br>
+                            &lt;/head&gt;<br>
+                        </td>
+                        <td class="table-note">
+                            Reference:
+                            <a href="https://fonts.google.com/">Take a look at Google Fonts</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="table-name">Add tooltip next to element</td>
+                        <td class="table-example">&lta href="url" title="tooltip description"&gtLink description&lt/a&gt
+                        </td>
+                        <td class="table-note">This might make website less accessiable, should use css and javascript</td>
+                    </tr>
+                    <tr>
+                        <td class="table-name">add new</td>
+                        <td class="table-example">add new</td>
+                        <td class="table-note">add new</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        </div>
+</main>
+<footer id="resources">
+    <h5>Useful Resources</h5>
+    <div class="resources-content">
+        <ul>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Web">Mozilla Developer Docs</a></li>
+            <li><a href="https://htmlcheatsheet.com">Interactive HTML & CSS cheatsheet</a></li>
+            <li><a href="https://www.w3schools.com/css/default.asp">W3 school</a></li>
+            <li><a href="https://colors.muz.li/color-palette-generator/006600">Muzli Pallete</a></li>
+            <li><a href="https://fonts.google.com/icons?icon.query=hive&icon.style=Sharp&icon.platform=web">Google Icons</a></li>
+            <li><a href="https://m3.material.io">Material IO</a></li>
+        </ul>
+    </div>
+
+</footer>
+</body>
+</html>

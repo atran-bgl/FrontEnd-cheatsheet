@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8">
+<title>UI UX awsomeness</title>
+<meta name="description" content="This page contains cheat sheet for HTML, CSS and JavaScript">
+<link rel="stylesheet" type="text/css" href="styles/styles.css">
+<link rel="preconnect" href="https://fonts.googleapis.com"> 
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+<body>
+<!-- Content -->
+<header>
+    <div class="logo">
+        <span class="material-symbols-outlined">hive</span>
+    </div>
+    <nav class="menu-top">
+        <ul>
+            <li class="nav-top"><a href="index.html">Design</a></li>
+            <li class="nav-top"><a href="html.html">HTML</a></li>
+            <li class="nav-top"><a href="#">CSS</a></li>
+            <li class="nav-top"><a href="javascript.html">JavaScript</a></li>
+            <li class="nav-top"><a href="#resources">Resources</a></li>
+        </ul>
+    </nav>
+    <form class="search-bar-top">
+        <input type="search" id="search-top" name="q" placeholder="search for a term"/>
+        <button>Search</button>
+    </form>
+</header>
+<main>
+    <nav class="menu-side">
+        <ul>
+            <li class="nav-side"><a href="index.html">Design</a></li>
+            <li class="nav-side"><a href="html.html">HTML</a></li>
+            <li class="nav-side"><a href="#">CSS</a></li>
+            <li class="nav-side"><a href="javascript.html">JavaScript</a></li>
+            <li class="nav-side"><a href="#resources">Resources</a></li>
+        </ul> 
+    </nav>
+    <div class="content">
+        <section id="css">
+            <h3>CSS Cheat sheet</h3>
+            <table>
+                <caption></caption>
+                <thead>
+                    <tr>
+                        <th class="table-name">CSS rule</th>
+                        <th class="table-example">Example</th>
+                        <th class="table-note">Notes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="table-name">Text - vertical alignment</td>
+                        <td class="table-example">
+                            element, tag {<br>
+                                &nbsp&nbsp&nbsp&nbsp vertical-align: text-top;<br>
+                            }
+                        </td>
+                        <td class="table-note">
+                            Possible values: <br>
+                            baseline, sub, super, text-top, text-bottom, middle, top, bottom
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="table-name">Text - horiztontal alignment</td>
+                        <td class="table-example">
+                            element, tag {<br>
+                                &nbsp&nbsp&nbsp&nbsp  text-align: center;<br>
+                            }
+                        </td>
+                        <td class="table-note">
+                            Possible values: <br>
+                            start, end, left, right, center, justify, match-parent
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="table-name">Text - indetation</td>
+                        <td class="table-example">
+                            element, tag {<br>
+                                &nbsp&nbsp&nbsp&nbsp  text-indent: 0.5em;<br>
+                            }
+                        </td>
+                        <td class="table-note">
+                            Specifies the indentation applied to lines of inline content in a block.<br>
+                            The indentation only affects the first line of inline content in the block <br>
+                            unless the 'hanging' keyword is specified, <br>
+                            in which case it affects all lines except the first. <br>
+                            Syntax: [length-percentage] hanging each-line
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="table-name">3D button</td>
+                        <td class="table-example">
+                            button {<br>
+                                &nbsp&nbsp&nbsp&nbsp  padding: 5px;<br>
+                                &nbsp&nbsp&nbsp&nbsp  border: 1px solid black;<br>
+                                &nbsp&nbsp&nbsp&nbsp  border-radius: 5px;<br>
+                                &nbsp&nbsp&nbsp&nbsp  text-decoration: none;<br>
+                                &nbsp&nbsp&nbsp&nbsp  box-shadow: 0px 5px;<br>
+                              }<br>
+                            <br>
+                            button:hover {<br>
+                                &nbsp&nbsp&nbsp&nbsp  cursor: pointer;<br>
+                              }<br>
+                            <br>
+                            button:active {<br>
+                                &nbsp&nbsp&nbsp&nbsp  margin-top: 5px;<br>
+                                &nbsp&nbsp&nbsp&nbsp  color: black;<br>
+                                &nbsp&nbsp&nbsp&nbsp  box-shadow: 0px 0px;<br>
+                              }<br>
+                        </td>
+                        <td class="table-note">
+                            To make a button appears 3D, as the minimum the left css rule sets are required.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="table-name">Link, button pseudo class</td>
+                        <td class="table-example">
+                            :link, :visited, :hover, :active
+                        </td>
+                        <td class="table-note">
+                            This is proper cascade order for pseudo-classes so that they show all link states accurately
+                            <br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="table-name">breadcrumb site navigation</td>
+                        <td class="table-example">
+                            .menu li { <br>
+                                &nbsp&nbsp&nbsp&nbsp  display: inline; <br> 
+                              } <br>
+                              <br>
+                            .menu li+li::before { <br>
+                                &nbsp&nbsp&nbsp&nbsp  padding: 10px; <br>
+                                &nbsp&nbsp&nbsp&nbsp  content: ">" <br>
+                              }
+                        </td>
+                        <td class="table-note">
+                            The menu display property needs to set to "inline" (same line) <br>
+                            In this example, the breadcrum menu are separatedly by ">" <br>
+                            The ::before and ::after pseudo-elements to add filled rectangles <br>
+                            (with the specified content) before and after each list item <br>
+                            See more example in <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/::before">::before pseudo class</a>
+                        </td>
+                    </tr>
+                    
+                </tbody>
+                <tfoot>
+                    <tr>
+                    </tr>
+                </tfoot>
+            </table>
+        </section>          
+    </div>
+</main>
+<footer id="resources">
+    <h5>Useful Resources</h5>
+    <div class="resources-content">
+        <ul>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Web">Mozilla Developer Docs</a></li>
+            <li><a href="https://htmlcheatsheet.com">Interactive HTML & CSS cheatsheet</a></li>
+            <li><a href="https://www.w3schools.com/css/default.asp">W3 school</a></li>
+            <li><a href="https://colors.muz.li/color-palette-generator/006600">Muzli Pallete</a></li>
+            <li><a href="https://fonts.google.com/icons?icon.query=hive&icon.style=Sharp&icon.platform=web">Google Icons</a></li>
+            <li><a href="https://m3.material.io">Material IO</a></li>
+        </ul>
+    </div>
+</footer>
+</body>
+</html>
