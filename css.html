@@ -4,43 +4,50 @@
 <title>UI UX awsomeness</title>
 <meta name="description" content="This page contains cheat sheet for HTML, CSS and JavaScript">
 <link rel="stylesheet" type="text/css" href="styles/styles.css">
+<link rel="stylesheet" type="text/css" href="styles/design.css">
 <link rel="preconnect" href="https://fonts.googleapis.com"> 
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+<link rel="icon" href="assets/logo/logo-fill.png" type="image/icon type">
+<script src="main.js" defer></script>
 </head>
 <body>
-<!-- Content -->
+<!-- header -->
 <header>
-    <div class="logo">
-        <span class="material-symbols-outlined">hive</span>
+    <div class="section-heading">
+        <img src="assets/logo/logo.png"/>
+        <h2>Design Materials</h2>
     </div>
-    <nav class="menu-top">
-        <ul>
-            <li class="nav-top"><a href="index.html">Design</a></li>
-            <li class="nav-top"><a href="html.html">HTML</a></li>
-            <li class="nav-top"><a href="#">CSS</a></li>
-            <li class="nav-top"><a href="javascript.html">JavaScript</a></li>
-            <li class="nav-top"><a href="#resources">Resources</a></li>
-        </ul>
-    </nav>
     <form class="search-bar-top">
         <input type="search" id="search-top" name="q" placeholder="search for a term"/>
         <button>Search</button>
     </form>
 </header>
+<nav class="menu-side">
+    <ul>
+        <li class="nav-side logo">
+            <a href="index.html">
+                <img id="side-menu-index" src="assets/logo/logo.png"/>
+                <div class=label>Home</div></a></li>
+        <li class="nav-side">
+            <a href="design.html">
+                <span id="side-menu-design" class="material-symbols-outlined">brush</span>
+                <div class=label>Design</div></a></li>
+        <li class="nav-side"><a href="html.html">
+            <span id="side-menu-html" class="material-symbols-outlined">code</span>
+            <div class="label">HTML</div></a></li>
+        <li class="nav-side"><a href="css.html">
+            <span id="side-menu-css" class="material-symbols-outlined">palette</span>
+            <div class="label">CSS</div></a></li>
+        <li class="nav-side"><a href="javascript.html">
+            <span id="side-menu-javascript" class="material-symbols-outlined">highlight</span>
+            <div class="label">JavaScript</div></a></li>
+    </ul> 
+</nav>
 <main>
-    <nav class="menu-side">
-        <ul>
-            <li class="nav-side"><a href="index.html">Design</a></li>
-            <li class="nav-side"><a href="html.html">HTML</a></li>
-            <li class="nav-side"><a href="#">CSS</a></li>
-            <li class="nav-side"><a href="javascript.html">JavaScript</a></li>
-            <li class="nav-side"><a href="#resources">Resources</a></li>
-        </ul> 
-    </nav>
     <div class="content">
         <section id="css">
             <h3>CSS Cheat sheet</h3>
@@ -146,6 +153,35 @@
                             The ::before and ::after pseudo-elements to add filled rectangles <br>
                             (with the specified content) before and after each list item <br>
                             See more example in <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/::before">::before pseudo class</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="table-name">align-items, align-content, align-self</td>
+                        <td class="table-example"></td>
+                        <td class="table-note">
+                            <ul>
+                                <li><strong>align-items</strong> specifies how individual elements should spread across the column axis. <br>
+                                    declared on the grid/flex container.</li>
+                                <li><strong>align-content</strong> specifies how groups of elements should spread across the column axis. <br>
+                                    declared on the grid/flex container.</li>
+                                <li><strong>align-self</strong> specifies how a single element should position itself with respect to the column axis. <br>
+                                    declared on the grid/flex item.</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="table-name">justify-items, justify-content, justify-self</td>
+                        <td class="table-example"></td>
+                        <td class="table-note">
+                            <ul>
+                                <li><strong>justify-items</strong> specifies how individual elements should spread across the row axis. <br>
+                                    declared on the flex, grid container</li>
+                                <li><strong>justify-content</strong> specifies how groups of elements should spread across the row axis. <br>
+                                    declared on the flex, grid container</li>
+                                <li><strong>justify-self</strong> specifies how a single element should position itself with respect to the row axis. <br>
+                                    declared on the flex / grid item.</li>
+                            </ul>
+                            
                         </td>
                     </tr>
                     

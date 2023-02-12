@@ -1,3 +1,28 @@
+.design-menu-top {
+    display: grid;
+    grid: 1fr / repeat(4, 1fr);
+    padding: 10px;
+    gap: 20px
+}
+
+.menu-top {
+    border-radius: 10px;
+    background-color:  #c4b1ce;
+    padding: 20px;
+    text-align: center;
+
+}
+
+.menu-top a {
+    text-decoration: none;
+    color: #4e0660;
+}
+
+.menu-top:hover { 
+    transition: ease;
+    background-color: #fcf6fe;
+}
+
 .primary-color, .secondary-color, .error-color {
     display: flex;
 }
