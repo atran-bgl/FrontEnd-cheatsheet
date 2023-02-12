@@ -4,62 +4,537 @@
 <title>UI UX awsomeness</title>
 <meta name="description" content="This page contains cheat sheet for HTML, CSS and JavaScript">
 <link rel="stylesheet" type="text/css" href="styles/styles.css">
+<link rel="stylesheet" type="text/css" href="styles/design.css">
 <link rel="preconnect" href="https://fonts.googleapis.com"> 
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+<link rel="icon" href="assets/logo/logo-fill.png" type="image/icon type">
+<script src="main.js" defer></script>
 </head>
 <body>
-<!-- Content -->
+<!-- header -->
 <header>
-    <div class="logo">
-        <span class="material-symbols-outlined">hive</span>
+    <div class="section-heading">
+        <img src="assets/logo/logo.png"/>
+        <h2>Design Materials</h2>
     </div>
-    <nav class="menu-top">
-        <ul>
-            <li class="nav-top"><a href="index.html">Design</a></li>
-            <li class="nav-top"><a href="html.html">HTML</a></li>
-            <li class="nav-top"><a href="css.html">CSS</a></li>
-            <li class="nav-top"><a href="#">JavaScript</a></li>
-            <li class="nav-top"><a href="#resources">Resources</a></li>
-        </ul>
-    </nav>
     <form class="search-bar-top">
         <input type="search" id="search-top" name="q" placeholder="search for a term"/>
         <button>Search</button>
     </form>
 </header>
+<nav class="menu-side">
+    <ul>
+        <li class="nav-side logo">
+            <a href="index.html">
+                <img id="side-menu-index" src="assets/logo/logo.png"/>
+                <div class=label>Home</div></a></li>
+        <li class="nav-side">
+            <a href="design.html">
+                <span id="side-menu-design" class="material-symbols-outlined">brush</span>
+                <div class=label>Design</div></a></li>
+        <li class="nav-side"><a href="html.html">
+            <span id="side-menu-html" class="material-symbols-outlined">code</span>
+            <div class="label">HTML</div></a></li>
+        <li class="nav-side"><a href="css.html">
+            <span id="side-menu-css" class="material-symbols-outlined">palette</span>
+            <div class="label">CSS</div></a></li>
+        <li class="nav-side"><a href="javascript.html">
+            <span id="side-menu-javascript" class="material-symbols-outlined">highlight</span>
+            <div class="label">JavaScript</div></a></li>
+    </ul> 
+</nav>
+<!--main-->
 <main>
-    <nav class="menu-side">
-        <ul>
-            <li class="nav-side"><a href="index.html">Design</a></li>
-            <li class="nav-side"><a href="html.html">HTML</a></li>
-            <li class="nav-side"><a href="css.html">CSS</a></li>
-            <li class="nav-side"><a href="#">JavaScript</a></li>
-            <li class="nav-side"><a href="#resources">Resources</a></li>
-        </ul> 
-    </nav>
     <div class="content">
         <section id="javascript">
             <h3>JavaScript Cheat sheet</h3>
-        </section>          
+            <table>
+                <caption></caption>
+                <thead>
+                    <tr>
+                        <th class="table-name">JavaScript terms</th>
+                        <th class="table-example">Example</th>
+                        <th class="table-note">Notes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="table-name">String object</td>
+                        <td class="table-example"></td>
+                        <td class="table-note"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String object MDN Reference</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="table-name">String interpolation</td>
+                        <td class="table-example">
+                            <pre>
+                            let myName = 'some name';
+                            let myAge = 27;
+                            console.log(`my name is ${myName}. i am ${myAge}`);
+                            </pre>           
+                        </td>
+                        <td class="table-note"> The template literal is wrapped by backticks ` (this key is usually located on the top of your keyboard, left of the 1 key).
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="table-name">Standard built-in object</td>
+                        <td class="table-example"></td>
+                        <td class="table-note"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects">Built-in object MDN Reference</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="table-name">Comparison Operators</td>
+                        <td class="table-example"></td>
+                        <td class="table-note"> &gt;, &lt;, &lt=, &gt;=, ===, !==</td>   
+                    </tr>
+                    <tr>
+                        <td class="table-name">Logical Operators</td>
+                        <td class="table-example">
+                            <pre>
+                            let username = '';
+                            let defaultName = username || 'Stranger';
+                            console.log(defaultName); // Prints: Stranger 
+                            username = 'anna'
+                            console.log(defaultName); // Prints: anna 
+                            console.log('orange' === 'apple') //Prints: false
+                            </pre>
+                        </td>
+                        <td class="table-note">
+                            <li>the and operator (&&)</li>
+                            <li>the or operator (||)</li>
+                            <li>the not operator, otherwise known as the bang operator (!)</li>
+                        </td>   
+                    </tr>
+                    <tr>
+                        <td class="table-name">Check if a variable exist (Truthy and Falsy</td>
+                        <td class="table-example">
+                            <pre>
+                            let myVariable = 'I Exist!';
+                            if (myVariable) { 
+                                console.log(myVariable)
+                            } else {
+                                console.log('The variable does not exist.') 
+                            };
+                            </pre>
+                        </td>
+                        <td class="table-note">
+                            The list of falsy values includes: <br>
+                            <li>0</li>
+                            <li>Empty strings like "" or ''</li>
+                            <li>null which represent when there is no value at all</li>
+                            <li>undefined which represent when a declared variable lacks a value</li>
+                            <li>NaN, or Not a Number</li>
+                        </td>   
+                    </tr>
+                    <tr>
+                        <td class="table-name">Ternary Operator</td>
+                        <td class="table-example">
+                            <pre>
+                            <FONT COLOR = #410f70>Original if/else:</FONT> 
+                            let isNightTime = true; 
+                            if (isNightTime) { 
+                                console.log('Turn on the lights!'); 
+                            } else { 
+                                console.log('Turn off the lights!'); 
+                            } 
+                            <br>
+                            <FONT COLOR = #410f70>Refactor with Ternary:</FONT> 
+                            isNightTime ? console.log('Turn on the lights!') : console.log('Turn off the lights!');
+                            </pre>
+                                                 
+                        </td>
+                        <td class="table-note">Short-hand operator for if...else statement</td>   
+                    </tr>
+                    <tr>
+                        <td class="table-name">Control flow if .. else if .. else </td>
+                        <td class="table-example"> 
+                            <pre>
+                            let stopLight = 'yellow';
+                            if (stopLight === 'red') { 
+                                console.log('Stop!'); 
+                            } else if (stopLight === 'yellow') { 
+                                console.log('Slow down.'); 
+                            } else if (stopLight === 'green') { 
+                                console.log('Go!'); 
+                            } else { 
+                                console.log('Caution, unknown!');
+                            };
+                            </pre>  
+                        </td>
+                        <td class="table-note"></td>   
+                    </tr>
+                    <tr>
+                        <td class="table-name">switch</td>
+                        <td class="table-example">
+                            <pre>
+                            let groceryItem = 'papaya';
+                            switch (groceryItem) {
+                            case 'tomato':
+                                console.log('Tomatoes are $0.49');
+                                break;
+                            case 'lime':
+                                console.log('Limes are $1.49');
+                                break;
+                            case 'papaya':
+                                console.log('Papayas are $1.29');
+                                break;
+                            default:
+                                console.log('Invalid item');
+                                break;
+                            }
+                            // Prints 'Papayas are $1.29'
+                            </pre>    
+                        </td>
+                        <td class="table-note">Alternative of if .. else if .. else</td>   
+                    </tr>
+                    <tr>
+                        <td class="table-name">Function</td>
+                        <td class="table-example"> <br>
+                            <pre>
+                                greetWorld(); // Output: Hello, World!
+                                function greetWorld() {
+                                    console.log('Hello, World!');
+                                }
+                            </pre>
+                            
+                        </td>
+                        <td class="table-note"> The <FONT COLOR = #410f70>hoisting</FONT> feature in JavaScript which allows access 
+                            to function declarations before they are defined.
+                        </td>   
+                    </tr>
+                    <tr>
+                        <td class="table-name">Function expression</td>
+                        <td class="table-example"> <br>
+                            <FONT COLOR = #410f70>assign an anonymous function to a variable</FONT>
+                            <pre>
+                                const variable_name = function(parameter_1, parameter_2) {
+                                    return  parameter_1 * parameter_2
+                                }
+                            </pre>
+                            <FONT COLOR = #410f70>Call the function</FONT>
+                            variable_name(argument_1, argument_2)
+                        </td>
+                        <td class="table-note">Unlike function declarations, function expressions are <FONT COLOR = #410f70>not hoisted</FONT> <br>
+                            so they cannot be called before they are defined.</td>   
+                    </tr>
+                    <tr>
+                        <td class="table-name">Arrow Function</td>
+                        <td class="table-example"> <br>
+                            <FONT COLOR = #410f70>assign an anonymous function to a variable</FONT><br>
+                            <pre>
+                                const variable_name = (parameter_1, parameter_2) => {
+                                    return  parameter_1 * parameter_2
+                                }
+                            </pre>
+                            <FONT COLOR = #410f70>Call the function</FONT>
+                            variable_name(argument_1, argument_2)
+                        </td>
+                        <td class="table-note">
+                            The function key word in function expression is replaced with a fat arrow (=>) <br>
+                            Note: <br>
+                            <li>Arrow functions are limited and cannot be used in all situations:</li>
+                            <li>They do not have their own bindings to <FONT COLOR = #410f70>this</FONT> keyword or <FONT COLOR = #410f70>super</FONT>, and should not be used as methods.</li>
+                            <li>They cannot be used as constructors.</li>
+                            <li>They cannot use <FONT COLOR = #410f70>yield</FONT>, within its body.</li>
+                            <li>They cannot use the special arguments keyword.</li>
+                            Reference: <a href="https://www.codecademy.com/resources/docs/javascript/arrow-functions?page_ref=catalog">Arrow Function</a>
+                        </td>   
+                    </tr>
+                    <tr>
+                        <td class="table-name">Concise Arrow Function</td>
+                        <td class="table-example"> <br>
+                            <FONT COLOR=#410f70>No parameter</FONT> <br>
+                            const variable_name = () => {//function has muliple lines} <br><br>
+                            <FONT COLOR=#410f70>1 parameter</FONT> <br>
+                            const variable_name = parameter_1 => parameter_1 * 1000 // function is single-line block <br><br>
+                            <FONT COLOR=#410f70>2 or more parameters</FONT> <br>
+                            const variable_name = (parameter_1, parameter_2) => parameter_1 * 1000
+                        </td>
+                        <td class="table-note">
+                            The return keyword is removed if the function consists of a single-line block. <br>
+                            This is referred to as implicit return. 
+                        </td>   
+                    </tr>
+                    <tr>
+                        <td class="table-name">Loops</td>
+                        <td class="table-example"><br>
+                            <FONT COLOR = #410f70>for</FONT> loop:
+                            <pre>
+                                for (let i = 0; i &lt; 5; i++) {
+                                    console.log(i) <br>
+                                };
+                            </pre>
+                            <FONT COLOR = #410f70>for...of</FONT> loop: (to loop through string or array)
+                            <pre>
+                                let arr = [1, 2, 4]
+                                for (let a of arr) { 
+                                    console.log(var);
+                                };
+                            </pre>
+                            <FONT COLOR = #410f70>for...in</FONT> loop: (to loop through object)
+                            <pre>
+                                let objA = {'apple': 2, 'orange': 3}
+                                for (let ob in objA) {
+                                    console.log(ob)
+                                };
+                            </pre>
+                            <FONT COLOR = #410f70>while</FONT> loop:
+                            <pre>
+                                let counter = 1;
+                                while (counter &lt; 5) {
+                                    console.log(counter)
+                                counter++;
+                                }
+                            </pre>
+                            
+                            <FONT COLOR = #410f70>do...while</FONT> loop:
+                            <pre>
+                                let counter = 1;
+                                do {
+                                    console.log(counter);
+                                    counter++;
+                                } while (counter &lt;5);
+                            </pre>
+                        </td>
+                        <td class="table-note">
+                            <ul>
+                                <li>While loop is useful when the number of loop is unknown and based on a condition</li>
+                                <li>The difference between while and do...while loops is that do...while loop will be executed at least once. <br>
+                                It Only checks the stopping condition after the first execution </li>
+                                <li>The 'break' keyword can be used to stop the iteration</li>
+                                <li>The 'continue' keyword can be used to skip the iteration</li>
+                            </ul>
+                        </td>   
+                    </tr>
+                    <tr>
+                        <td class="table-name">Objects</td>
+                        <td class="table-example">
+                            <pre>
+                                let objectA = {
+                                    key1: value1,  // property key1
+                                    'key 2': value2,  // property 'key 2'
+                                    'key 3': 'value3',
+                                    function1: function () {}, // the object key is the method name 
+                                                              // the value is an anonymous function expression
+                                    netestObjectB: {
+                                        bkey1: bvalue1,
+                                        nestedObjectC: {
+                                            ckey1: cvalue1
+                                        }
+                                    } 
+                            </pre>
+                        <FONT COLOR = #410f70>Access the object's properties using dot . notation:</FONT>
+                            <pre>
+                                accessProperty_key1 = objectA.key1;
+                            </pre>    
+                        <FONT COLOR = #410f70>Access the object's properties using bracket [] notation:</FONT>
+                            <pre>
+                                accessProperty_key_2 = objectA['key 2']
+                            </pre>
+                        <FONT COLOR = #410f70>Access the object's function</FONT>
+                            <pre>
+                                objectA.function1();
+                            </pre>
+                            <FONT COLOR = #410f70>Access the object's nested object property</FONT>
+                            <pre>
+                                // access property bkey1 of nested object B
+                                objectA.nestedObjectB.bKey1
+
+                                // access property ckey1 of nested object C nesting in nested object B
+                                objectA.nestedObjectB["nested ObjectC"].ckey1 
+                            </pre>
+                            
+                        </td>
+                        <td class="table-note"> <br>
+                            When the data stored on an object is a function we call that a method. <br>
+                            A property is what an object has, while a method is what an object does. <br>
+                        </td>   
+                    </tr>
+                    <tr>
+                        <td class="table-name">Getter</td>
+                        <td class="table-example"> <br>
+                            <pre>
+                                obj = {
+                                    _property1: value1,
+                                    get property1() {
+                                        return this._property1;
+                                    }
+                                }
+                            </pre>
+                        <FONT COLOR = #410f70>Access the getter function</FONT> <br>
+                        obj.property1 // return value1
+                        </td>
+                        <td class="table-note">
+                            <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/get">Getter Reference</a>
+                        </td>   
+                    </tr>
+                    <tr>
+                        <td class="table-name">Setter</td>
+                        <td class="table-example"><br>
+                            <pre>
+                                obj = {
+                                    _property1: value1,
+                                    set property1(value) {
+                                        this._property1 = value;
+                                        }
+                                    }
+                            </pre>
+                        <FONT COLOR = #410f70>Access the setter function</FONT> <br>
+                        obj.property1(new_value) // set property1 value to new_value
+                        </td>
+                        <td class="table-note">
+                            <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/set">Setter Reference</a>
+                        </td>   
+                    </tr>
+                    <tr>
+                        <td class="table-name">Destructuring Assignment</td>
+                        <td class="table-example"><br>
+                        
+
+                        </td>
+                        <td class="table-note">
+                            The destructuring assignment syntax is a JavaScript expression that makes it possible to unpack values from arrays, <br>
+                             or properties from objects, into distinct variables. <br>
+                            <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment">Destructuring Assignment</a>
+                        </td>   
+                    </tr>
+                    <tr>
+                        <td class="table-name">Standard Built-in Object methods</td>
+                        <td class="table-example"></td>
+                        <td class="table-note">
+                            <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects">Reference</a>
+                        </td>   
+                    </tr>
+                    <tr>
+                        <td class="table-name"></td>
+                        <td class="table-example"></td>
+                        <td class="table-note">
+                        </td>   
+                    </tr>
+                    <tr>
+                        <td class="table-name"></td>
+                        <td class="table-example"></td>
+                        <td class="table-note">
+                        </td>   
+                    </tr>
+                </tbody>
+            </table>
+            <article id="promise">
+                <a href="#promise"><h4>Promise</h4></a>
+                <p>A promise is an object representing the eventual completion (or failure) of an asynchronous operation and its resulting value.</p>
+                
+                <h5>Constructing a promise</h5>
+                <span class="jscode">
+                    <pre>
+                        let myPromise = new Promise( (resolve, reject) => {
+                            resolve(); 
+                            reject();
+                        }) ;
+                    </pre>
+                </span>
+                <h5>Consuming data return from a promise</h5>
+                <span class="jscode">
+                    <pre>
+                        myPromise  
+                        .then((onFullfilled) => {}) 
+                        .catch((onRejected) => {})  
+                    </pre>
+                </span>
+                <h5>Chained promise</h5>
+                <span class="jscode">
+                    <pre>
+                        const myPromise = new Promise((resolve, reject) => {
+                            setTimeout( () => {
+                                resolve("foo");
+                            }, 300)
+                        });
+                        myPromise
+                        .then(handleFulfilledA)
+                        .then(handleFulfilledB)
+                        .then(handleFulfilledC)
+                        .catch(handleRejectedAny)
+                    </pre>
+                </span>
+            </article>
+            <article id="json-object">
+                <h4>Converting a JSON string object to javascript object</h4>
+                <span class="jscode">
+                    <pre>
+                        const JsonObject = {
+                            "name": "person 1",
+                            "favourite book": ["Harry Potter 1", "Harry Potter 2"]
+                        };
+                        const jsObject = JSON.parse(JsonObject);
+                    </pre>
+                </span>
+                <h4>Converting a JavaScript object to JSON string object</h4>
+                <span class="jscode">
+                    <pre>
+                        const jsObject = { 
+                            name: "person 1",
+                            favourite-book: ["Harry Potter 1", "Harry Potter 2"]
+                        };
+                        const jsonObject = JSON.stringify(jsObject);
+                    </pre>              
+                </span>
+            </article>
+            <article id="async-await-get">
+                <h4>async await - GET request</h4>
+                <span class='jscode'></span>
+                    <pre>
+                        const getData = async () => {
+                            try {
+                                const response = await fetch(`${url}`, {
+                                    method: 'GET'
+                                }); // send request
+                                if (response.ok) { // handle response if sucessful
+                                    jsonResponse = await response.json(); 
+                                    // code to execute if response is succesful
+                                }
+                                throw new Error('Request failed');  // other error 401, 404
+                            } catch (error) { 
+                            console.log(error) // network error
+                            }
+                        }
+                    </pre>
+            </article>
+            <article id="async-await-post"">
+                <h4>async await POST request</h4>
+                <span class="jscode">
+                    <pre>
+                        const getData = async () => {
+                        // send request
+                            try {
+                                const response = await fetch( 'https://api-to-call.com/endpoint', {
+                                    method: 'POST',
+                                    body: JSON.stringify({some_key: some_value})
+                                });
+                        
+                                // handles response if successful
+                                if (response.ok) {
+                                    // Code to execute with jsonResponse
+                                    const jsonResponse = await response.json();
+                                }
+                                
+                                // handle 401, 404 response
+                                throw new Error ('Request failed!'):
+
+                            } catch(error) {
+                                
+                                // handles response if unsuccessful
+                                console.log(error);
+                            }
+                        }
+                    </pre>
+                </span>
+
+            </article>
+        </section>   
     </div>
 </main>
-<footer id="resources">
-    <h5>Useful Resources</h5>
-    <div class="resources-content">
-        <ul>
-            <li><a href="https://developer.mozilla.org/en-US/docs/Web">Mozilla Developer Docs</a></li>
-            <li><a href="https://htmlcheatsheet.com">Interactive HTML & CSS cheatsheet</a></li>
-            <li><a href="https://www.w3schools.com/css/default.asp">W3 school</a></li>
-            <li><a href="https://colors.muz.li/color-palette-generator/006600">Muzli Pallete</a></li>
-            <li><a href="https://fonts.google.com/icons?icon.query=hive&icon.style=Sharp&icon.platform=web">Google Icons</a></li>
-            <li><a href="https://m3.material.io">Material IO</a></li>
-        </ul>
-    </div>
-
-</footer>
 </body>
 </html>
