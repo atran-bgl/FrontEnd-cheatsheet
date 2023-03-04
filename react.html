@@ -5,6 +5,7 @@
 <meta name="description" content="This page contains cheat sheet for HTML, CSS and JavaScript">
 <link rel="stylesheet" type="text/css" href="styles/styles.css">
 <link rel="stylesheet" type="text/css" href="styles/design.css">
+<link rel="stylesheet" type="text/css" href="styles/code.css">
 <link rel="preconnect" href="https://fonts.googleapis.com"> 
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,7 +20,7 @@
 <header>
     <div class="section-heading">
         <img src="assets/logo/logo.png"/>
-        <h2>Design Materials</h2>
+        <h1>React cheatsheet</h1>
     </div>
     <form class="search-bar-top">
         <input type="search" id="search-top" name="q" placeholder="search for a term"/>
@@ -45,21 +46,303 @@
         <li class="nav-side"><a href="javascript.html">
             <span id="side-menu-javascript" class="material-symbols-outlined">highlight</span>
             <div class="label">JavaScript</div></a></li>
+        <li class="nav-side"><a href="react.html">
+            <span id="side-menu-react" class="material-symbols-outlined">design_services</span>
+            <div class="label">React</div></a></li>
     </ul> 
 </nav>
 <div class="content">
     <section id="react">
         <article id="create-react-app">
-            <h1>Create a react app</h1>
+            <h2>Create a react app</h2>
             <span><a href="https://www.codecademy.com/article/how-to-create-a-react-app">How to create a react app</a></span>
         </article>
             
-        <article id="stateful-vs-stateless-component">
+        <article id="class-component">
+            <h2>React Class Compponent</h2>
             
         </article>
+        
         <article id="life-cycle-methid">
+            <h2>React Life cycle meothod</h2>
             <a href="https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/">Lifecycle method diagram</a>
             <a href="https://www.codecademy.com/learn/paths/front-end-engineer-career-path/tracks/fecp-22-react-part-ii/modules/wdcp-22-lifecycle-methods/cheatsheet">Life cycle method cheat sheet</a>
+            <a href="https://reactjs.org/docs/hooks-reference.html">Hooks Reference</a>
+        </article>
+
+        <article id="function-component">
+            <div>
+                <h2>React Hooks</h2>
+                <h3>Rules for Using Hooks</h3>
+                <p>There are two main rules to keep in mind when using Hooks:</p>
+                <ol>
+                    <li>Only call Hooks from React function components.</li>
+                    <li>Only call Hooks at the top level, to be sure that Hooks are called in the same order each time a component renders.</li>
+                </ol>
+                <p>Common mistakes to avoid are calling Hooks inside of loops, conditions, or nested functions.</p>
+                <a href="https://reactjs.org/docs/hooks-custom.html">Use customise hooks</a>
+            </div>
+            
+            <h2>React function component - State Hooks </h2>
+            <span>Instead of using <highlight>this.state, setState</highlight> like in Class component,</span>
+            <span>React employs the State hooks by using the code below:</span>
+            <ul>
+                <li><code>currentState</code> to reference the current value of state</li>
+                <li><code>stateSetter</code> to reference a function used to update the value of this state</li>
+                <li>the <code>initialState</code> argument to initialize the value of state for the component\'s first render</li>
+            </ul>
+            <div>
+                <h3>Syntax</h3>
+                <pre style="display: block; border: 1px solid rgb(216, 211, 211); width: 50%; margin: auto;">
+                    const [currentState, stateSetter] = useState( initialState );
+                </pre>
+            </div>
+            <div>
+                <h4>State is boolean value</h4>
+                <div class="code-example">
+                    <pre>
+                        
+                        import React, { useState } from 'react';
+
+                        function ToggleLoading() {
+                        // initialize the state - current state = empty
+                        const [isLoading, setIsLoading] = useState();
+
+                        return (
+                            &ltdiv&gt
+
+                            &ltp&gtThe data is {isLoading ? 'Loading' : 'Not Loading'}&lt/p&gt
+
+                            &ltbutton onClick={() =&gt setIsLoading(true)} &gt
+                                Turn Loading On
+                            &lt/button&gt
+
+                            &ltbutton onClick={() =&gt setIsLoading(false)}&gt
+                                Turn Loading Off
+                            &lt/button&gt
+
+                            &lt/div&gt
+                        )
+                    </pre>
+                </div>
+            </div>
+            <div>
+                <h4>State is a string input value</h4>
+                <div class="code-example">
+                    <pre>
+                    
+                        import React, { useState } from 'react';
+     
+                        export default function EmailTextInput() {
+                        
+                        const [email, setEmail] = useState('');
+                        
+                        const handleChange = (event) => {
+                            const updatedEmail = event.target.value;
+                            setEmail(updatedEmail);
+                        }
+                        
+                        return (
+                            &ltinput value={email} onChange={handleChange} /&gt
+                        );
+                        }
+                    </pre>
+                </div>
+            </div>
+            <div>
+                <h4>Set from previous state</h4>
+                <span>Often, the next value of our state is calculated using the current state. 
+                    In this case, it is best practice to update state with a callback function. 
+                    If we do not, we risk capturing outdated, or “stale”, state values.
+                </span>
+                <div class="code-example">
+                    <pre>
+                        
+                        export default function Counter() {
+                            const [count, setCount] = useState(0);
+                           
+                            const increment = () =&gt setCount(prevCount =&gt prevCount + 1);
+                           
+                            return (
+                              &ltdiv&gt
+                                &ltp&gtWow, you've clicked that button: {count} times&lt/p&gt
+                                &ltbutton onClick={increment}&gtClick here!&lt/button&gt
+                              &lt/div&gt
+                            );
+                          }
+                    </pre>
+
+                </div>
+            </div>
+            <div>
+                <h4>State is array</h4>
+                <div class="code-example">
+                    <pre>
+
+                        import React, { useState } from "react";
+ 
+                        const options = ["Bell Pepper", "Sausage", "Pepperoni", "Pineapple"];
+                        
+                        export default function PersonalPizza() {
+                        const [selected, setSelected] = useState([]);
+                        
+                        const toggleTopping = ({target}) => {
+                            const clickedTopping = target.value;
+                            setSelected((prev) => {
+
+                            // check if clicked topping is already selected    
+                            if (prev.includes(clickedTopping)) {
+                                
+                                // filter the clicked topping out of state
+                                return prev.filter(t => t !== clickedTopping);
+                            } else {
+                                
+                                // add the clicked topping to our state
+                                return [clickedTopping, ...prev];
+                            }
+                            });
+                        };
+                        
+                        return (
+                            &ltdiv&gt
+                            {options.map(option =&gt (
+                                &ltbutton value={option} onClick={toggleTopping} key={option}&gt
+                                {selected.includes(option) ? "Remove " : "Add "}
+                                {option}
+                                &lt/button&gt
+                            ))}
+                            &ltp&gtOrder a {selected.join(", ")} pizza&lt/p&gt
+                            &lt/div&gt
+                        );
+                        }
+                    </pre>
+                </div>
+            </div>
+            <div>
+                <h4>State as an object</h4>
+                <div class="code-example">
+                    <pre>
+
+
+                        export default function Login() {
+                            const [formState, setFormState] = useState({});
+                           
+                            const handleChange = ({ target }) => {
+                              const { name, value } = target;
+                              setFormState((prev) => ({
+                                ...prev,
+                                [name]: value // this will overwrite the "name" key (in ...prev) with updated value
+                              }));
+                            };
+                           
+                            return (
+                              &ltform>
+                                &ltinput
+                                  value={formState.firstName}
+                                  onChange={handleChange}
+                                  name="firstName"
+                                  type="text"
+                                />
+                                &ltinput
+                                  value={formState.password}
+                                  onChange={handleChange}
+                                  type="password"
+                                  name="password"
+                                />
+                              &lt/form>
+                            );
+                          }
+                    </pre>
+                </div>
+            </div>
+        </article>
+        <article id="effect-hooks">
+            <h2>Effect Hooks</h2>
+            <div>
+                <p>In class components, side effects are managed with lifecycle methods.</p>
+                <p>In function components, we manage side effects with the Effect Hook.</p>
+                <p>Some common side effects include: fetching data from a server, subscribing to a data stream, <br>
+                    logging values to the console, interval timers, and directly interacting with the DOM.</p> 
+                <p>There are three key moments when the Effect Hook can be utilized:</p>
+                <ol>
+                    <li>When the component is first added, or mounted, to the DOM and renders</li>
+                    <li>When the state or props change, causing the component to re-render</li>
+                    <li>The component is removed, or unmounted, from the DOM.</li>
+                </ol>
+            </div>
+            <div class="code-example">
+                <h3>Effect Hook</h3>
+                <pre>
+                    
+                    import React, { useState, useEffect } from 'react';
+ 
+                    function TitleCount() {
+                    const [count, setCount] = useState(0);
+                    
+                    useEffect(() => {
+                        document.title = `You clicked ${count} times`;
+                    }, [count]);
+                    
+                    return &ltbutton onClick={(prev) => setCount(prev + 1)}>+&lt/button>;
+                    }
+
+                </pre>
+            </div>
+            <div class="code-example">
+                <h3>Effect Hook with clean up function</h3>
+                <pre>
+
+                    function App(props) {
+                    const [title, setTitle] = useState('');
+                    useEffect(() => {
+                    document.title = title;
+                    }, [title]);
+                    
+                    const [time, setTime] = useState(0);
+                    useEffect(() => {
+                    const intervalId = setInterval(() => setTime((prev) => prev + 1), 1000);
+                    return () => clearInterval(intervalId); // clean up function in return block
+                    }, []);
+                    }
+
+                </pre>
+            </div>
+            <div>
+                <h3>Effect Hooks with dependecy array</h3>
+                <p>The dependency array is used to tell the useEffect() method when to call our effect.</p>
+                <ul>
+                    <li>No dependency array provided: our effect is called after every render (i.e everytime every components change on the DOM)</li>
+                    <li>An empty dependency array: Effect is called once (i.e all data required is fetched once in the begining)</li>
+                    <li>A non-empty dependency array: Efect is only called again when the value of one of the listed dependencies has changed.</li>
+                </ul>
+                <div class="code-example">
+                    <pre>
+                        
+                        const [menu, setMenu] = useState(null);
+                        useEffect(() => {
+                            console.log('called ONCE');
+                            get('/menu').then(
+                                (response) => {setMenu(response.data)}
+                            )
+                           }, []);
+
+                        const [selectedMenu, setSelectedMenu] = useState(null);
+                        useEffect(() => {
+                            console.log('called when menu is change - switching menu')
+                            if (selectedMenu && !selectedMenu[content]) {
+                                get('/selectedMenu').then(
+                                    (response) => setSelectedMenu(response.data)
+                                )
+                            }
+                        }, [selectedMenu])
+
+                        useEffect (() => {
+                            console.log('call every renders')
+                            alert(something in the DOM has changed)
+                        })
+                    </pre>
+                </div>
+            </div>
         </article>
     </section>
 </div>

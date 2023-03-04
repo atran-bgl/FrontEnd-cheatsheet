@@ -45,6 +45,9 @@
         <li class="nav-side"><a href="javascript.html">
             <span id="side-menu-javascript" class="material-symbols-outlined">highlight</span>
             <div class="label">JavaScript</div></a></li>
+        <li class="nav-side"><a href="react.html">
+            <span id="side-menu-react" class="material-symbols-outlined">design_services</span>
+            <div class="label">React</div></a></li>
     </ul> 
 </nav>
 <!--main-->
@@ -533,6 +536,273 @@
                 </span>
 
             </article>
+            <article id="spread-operator">
+                <h4>The spread (...) operator</h4>
+                <span>Spread Syntax(…) is a feature introduced in ES6 that allows us to extract elements from an iterable object quickly.</span>
+                <table>
+                    <tr>
+                        <th>Usage</th>
+                        <th>Original</th>
+                        <th>With Spread (...)</th>
+                    </tr>
+                    <tr>
+                        <td>Copy an array
+                        </td>
+                        <td>
+                            <pre>
+                                let arr = [1, 2, 3, [4, 5]];
+                                let copy = arr.slice()
+                                console.log(copy)
+                                // [1, 2, 3, [4, 5]];
+                            </pre>
+                        </td>
+                        <td>
+                            <pre>
+                                let arr = [1, 2, 3, [4, 5]]
+                                let copy = [...arr]
+                                console.log(copy)
+                                // [1, 2, 3, [4, 5]];
+                            </pre>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Copy an object</td>
+                        <td>
+                            <pre>
+                                let user = { name: 'some_name', url: 'https://user.com'}
+                                let copy = Object.assign({}, user)
+                                console.log(copy); // 
+                            </pre>
+                        </td>
+                        <td>
+                            <pre>
+                                let user = { name: 'some_name', url: 'https://user.com'}
+                                let copy = {...user}
+                            </pre>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Add elements to begining/end of an array</td>
+                        <td>
+                            <pre>
+                                let arr = [3]
+
+                                arr.unshift(1, 2)
+                                arr.push(4, 5) 
+                                console.log(arr)  //[1, 2, 3, 4, 5]
+                                // both these methods modify the original array
+                            </pre>
+                        </td>
+                        <td>
+                            <pre>
+                                let arr = [3]
+                                let copy = [1, 2,...arr, 4, 5]
+                                console.log(copy) // [1, 2, 3, 4, 5]
+                                console.log(arr) // [3]
+                                // the spread operator create a new array and keep the original intact
+                            </pre>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Merge arrays</td>
+                        <td>
+                            <pre>
+                                let arr1 = [1, 2, 3]
+                                let arr2 = [4, 5, 6]
+
+                                let arr3 = arr1.concat( arr2 )
+                                console.log(arr3); // [1, 2, 3, 4, 5, 6]
+                            </pre>
+                        </td>
+                        <td>
+                            <pre>
+                                let arr1 = [1, 2, 3]
+                                let arr2 = [4, 5, 6]
+                                let arr3 = [...arr1, ...arr2]
+                                console.log(arr3); // [1, 2, 3, 4, 5, 6]
+                            </pre>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Merge objects</td>
+                        <td>
+                            <pre>
+                                let p1 = { name: 'anna' }
+                                let p2 = { tag: 'student' }
+
+                                let p3 = Object.assign({}, p1, p2)
+                                console.log(p3) ; // {name: 'anna', tag: 'student'}
+                            </pre>
+                        </td>
+                        <td>
+                            <pre>
+                                let p1 = { name: 'anna' }
+                                let p2 = { tag: 'student' }
+
+                                let p3 = {...p1, ...p2}
+                            </pre>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Convert a string to an array</td>
+                        <td>
+                            <pre>
+                                let str = 'test'
+
+                                let arr = str.split('')
+
+                                console.log(arr) ; ["t", "e", "s", "t"]
+                            </pre>
+                        </td>
+                        <td>
+                            <pre>
+                                let str = 'test'
+                                let arr = [...str]
+                            </pre>
+                            
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Convert an array-like object to an array
+                        </td>
+                        <td>
+                            <span>Some data structures in JavaScript look like arrays but are not arrays, such as NodeList, arguments object of a function</span>
+                            <pre>
+                                function foo(){
+                                    let argArray = Array.from(arguments) // convert the arguments to an array
+                                    console.log(argArray instanceof Array)
+                                  }
+                                  
+                                  foo();
+                            </pre>
+                        </td>
+                        <td>
+                            <pre>
+                                function sum(){
+                                    console.log(arguments)
+                                    
+                                    let argArray = [...arguments]
+                                    
+                                    console.log(argArray instanceof Array)
+                                  }
+                                  
+                                  sum(1, 2, 3); // Arguments {0: 1, 1: 2, 2: 3} / True
+                            </pre>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Extract Object</td>
+                        <td>
+                            <pre>
+                                let httpOptions = {
+                                    method: 'POST',
+                                    url: 'https://api.github.com',
+                                    returnType: 'json',
+                                    timeout: 2000,
+                                    data: {
+                                      name: 'anna'
+                                    }
+                                  }
+                            </pre> 
+                        </td>
+                        <td>
+                            <pre>
+                                let {method, url, ...config} = httpOptions
+                            </pre>
+                        </td>
+                        <tr>
+                            <td>Functions with infinite parameters</td>
+                        <td>
+                            <span>Use reduce() - require the argument to be an array</span>
+                            <pre>
+                                function sum(arr){
+                                    return arr.reduce((acc, cur) => acc + cur)
+                                }
+                            </pre>
+                            <span>convert the arguments to an array first</span>
+                            <pre>
+                                function sum() {
+                                    let argsArray = Array.from(arguments) 
+                                    return argsArray.reduce((acc, cur) => acc + cur)
+                                }
+                            </pre>
+                        </td>
+                        <td>
+                            <span>Using spread operator, the infinite argument will be converted to an array without extra code</span>
+                            <pre>
+                                function sum(...arr) {
+                                    return arr.reduce((acc, cur) => acc + cur)
+                                }
+                            </pre>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Math.max</td>
+                        <td>
+                            <pre>
+                                console.log(Math.max(1, 2, 43, 5, 7)) // 43
+                            </pre>
+                        </td>
+                        <td>
+                            <pre>
+                                let arr = [1, 2, 43, 5, 7]
+                                console.log(Math.max(...arr)) // 43
+                            </pre>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Rest parameters</td>
+                        <td>
+                            <pre>
+                                function team(leader, viceLeader, ...members){
+                                    console.log('leader: ' + leader)
+                                    console.log('vice leader: ' + viceLeader)
+                                    members.forEach(member => console.log('member: ' + member))
+                                  }
+                                  
+                                team('Jon', 'Jack', 'Bob', 'Alice');
+                            </pre>
+                        </td>
+                        <td>
+                            <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters">Reference</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Spread and computed property name in object</td>
+                        <td>
+                            when assigning a property key, it will overwrite the existing object
+                            <pre>
+                                let myObj = {
+                                    name:"anna",
+                                    id: 123
+                                  }
+                                myObj.name = "Annet"
+                            </pre>
+                        </td>
+                        <td>
+                            <pre>
+                                But if you don't want to overwrite existing object:
+                                
+                                let myObj = {
+                                    name:"anna",
+                                    id: 123
+                                  }
+                                  
+                                  let myName = "name"
+                                  
+                                  let obj2 = {
+                                    ...myObj,
+                                    [myName]: "Annet"
+                                  }
+                                  
+                                  console.log(obj2) // {name: "Annet", id: 123}
+                            </pre>
+                        </td>
+                    </tr>
+                </table>
+            </article>
+
         </section>   
     </div>
 </main>

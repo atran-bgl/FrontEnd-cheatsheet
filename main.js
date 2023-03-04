@@ -26,5 +26,3 @@ for (box of menuBox) {
     box.addEventListener('mouseout', restoreText)
 }
 
-
-
